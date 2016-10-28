@@ -1,0 +1,10 @@
+.DS_STORE
+
+node_modules
+
+src/js/constants/*
+
+src/app/**/*.constant.js
+
+*.unsplash.js
+

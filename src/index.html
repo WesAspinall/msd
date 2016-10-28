@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miami Self Defense</title>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+
+  <body ng-cloak layout='column' ng-controller='AppCtrl'>
+
+    <md-toolbar layout='row'>
+
+      <md-button ng-click='ul.toggleList();' aria-label='toggle side nav'> 
+
+        <md-icon md-svg-src='img/svg/menu.svg' class='avatar'>
+        </md-icon>
+        
+      </md-button>
+        <h1>Miami Self-Defense</h1>
+    </md-toolbar>
+
+    <div layout='row' class='container' flex>
+      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class='md-whiteframe-4dp' md-component-id='left'>
+        <md-list>
+          <md-list-item><md-button><md-icon>Sifu Edgar</md-icon></md-button></md-list-item>
+          <md-list-item><md-button> Cirriculum </md-button></md-list-item>
+          <md-list-item><md-button> Media </md-button></md-list-item>
+          <md-list-item><md-button> Contact </md-button></md-list-item> 
+        </md-list>
+      </md-sidenav>
+      <md-content flex>Content</md-content>
+    </div>
+
+
+    <script src="js/vendor.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js'></script>
+  </body>
+</html>

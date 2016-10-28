@@ -1,0 +1,1 @@
+angular.module('templates', []).run(['$templateCache', function($templateCache) {$templateCache.put('./root.html','<div class="root"><div id="root-view" class="container ui-view-component-fix" layout="column" flex ui-view></div></div>');}]);
