@@ -1,13 +1,18 @@
 angular
   .module('app', [
-    'templates', 'ngMaterial'
+    'templates', 'ngMaterial', 'users'
   ])
-  .config(function($mdIconProvider) {
+  .config(function($mdIconProvider, $mdThemingProvider) {
     $mdIconProvider
-      .icon("menu", "./assets/svg/menu.svg", 24)
-      .icon("share", "./assets/svg/share.svg", 24);
-      // .icon("google_plus", "./assets/svg/google_plus.svg", 24)
-      // .icon("hangouts", "./assets/svg/hangouts.svg", 24)
-      // .icon("twitter", "./assets/svg/twitter.svg", 24)
-      // .icon("phone", "./assets/svg/phone.svg", 24);
+      .defaultIconSet("./img/svg/avatars.svg", 128)
+      .icon("menu", "./img/svg/menu.svg", 24)
+      .icon("share", "./img/svg/share.svg", 24)
+      .icon("google_plus", "./assets/svg/google_plus.svg", 24)
+      .icon("hangouts", "./assets/svg/hangouts.svg", 24)
+      .icon("twitter", "./assets/svg/twitter.svg", 24)
+      .icon("phone", "./assets/svg/phone.svg", 24);
+
+    $mdThemingProvider.theme('default')
+      .primaryPalette('deep-orange')
+      .accentPalette('grey')
   });

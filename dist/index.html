@@ -11,29 +11,42 @@
     
   </head>
 
-  <body ng-cloak layout='column' ng-controller='AppCtrl'>
+  <body ng-cloak layout='column' ng-controller='AppCtrl as ul'>
 
     <md-toolbar layout='row'>
-
       <md-button ng-click='ul.toggleList();' aria-label='toggle side nav'> 
-
-        <md-icon md-svg-src='img/svg/menu.svg' class='avatar'>
+        <md-icon md-svg-icon='menu' class='avatar'>
         </md-icon>
-        
       </md-button>
+
         <h1>Miami Self-Defense</h1>
     </md-toolbar>
 
     <div layout='row' class='container' flex>
       <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class='md-whiteframe-4dp' md-component-id='left'>
         <md-list>
-          <md-list-item><md-button><md-icon>Sifu Edgar</md-icon></md-button></md-list-item>
-          <md-list-item><md-button> Cirriculum </md-button></md-list-item>
-          <md-list-item><md-button> Media </md-button></md-list-item>
-          <md-list-item><md-button> Contact </md-button></md-list-item> 
+          <md-list-item ng-repeat='u in ul.users'>
+
+          <md-button ng-click='ul.selectUser(u)'>
+            <md-icon md-svg-src='{{u.avatar}}' class='avatar'></md-icon>
+            {{u.name}}
+          </md-button>
+
+          </md-list-item>
         </md-list>
       </md-sidenav>
-      <md-content flex>Content</md-content>
+
+      <md-content id='content' flex>
+        <md-button class='share' aria-label='share' md-no-ink ng-click='ul.share(ul.selected)'>
+
+          <md-icon md-svg-icon='share'></md-icon>
+        </md-button>
+        <md-icon md-svg-src='{{ul.selected.avatar}}' class='avatar'></md-icon>
+        <h2>{{ul.selected.name}}</h2>
+        <p>{{ul.selected.content}}</p>
+
+      </md-content>
+
     </div>
 
 
