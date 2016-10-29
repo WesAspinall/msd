@@ -47,10 +47,6 @@ function AppCtrl($scope, $mdBottomSheet, $mdSidenav, AppService) {
         name: 'Google+',
         icon: 'google_plus',
         icon_url: 'img/svg/google_plus.svg'
-      }, {
-        name: 'Hangout',
-        icon: 'hangouts',
-        icon_url: 'img/svg/hangouts.svg'
       }];
 
       this.performAction = function(action) {
@@ -63,5 +59,5 @@ function AppCtrl($scope, $mdBottomSheet, $mdSidenav, AppService) {
 }
 
 angular
-  .module('users')
+  .module('app')
   .controller('AppCtrl', AppCtrl);

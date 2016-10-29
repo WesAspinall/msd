@@ -7,6 +7,7 @@
     <title>Miami Self Defense</title>
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link rel="stylesheet" href="css/style.css">
     
   </head>
@@ -23,7 +24,7 @@
     </md-toolbar>
 
     <div layout='row' class='container' flex>
-      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class='md-whiteframe-4dp' md-component-id='left'>
+      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class='sidenav md-whiteframe-4dp' md-component-id='left'>
         <md-list>
           <md-list-item ng-repeat='u in ul.users'>
 
@@ -41,9 +42,12 @@
 
           <md-icon md-svg-icon='share'></md-icon>
         </md-button>
-        <md-icon md-svg-src='{{ul.selected.avatar}}' class='avatar'></md-icon>
+      
         <h2>{{ul.selected.name}}</h2>
         <p>{{ul.selected.content}}</p>
+                  <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/waspnx/15min" style="min-width:320px;height:580px;"></div>
+        <!-- Calendly inline widget end -->
 
       </md-content>
 
@@ -52,6 +56,7 @@
 
     <script src="js/vendor.js"></script>
     <script src="js/bundle.js"></script>
+    <script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js'></script>

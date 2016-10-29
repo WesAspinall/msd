@@ -8,11 +8,11 @@ angular
       .icon("menu", "./img/svg/menu.svg", 24)
       .icon("share", "./img/svg/share.svg", 24)
       .icon("google_plus", "./assets/svg/google_plus.svg", 24)
-      .icon("hangouts", "./assets/svg/hangouts.svg", 24)
-      .icon("twitter", "./assets/svg/twitter.svg", 24)
-      .icon("phone", "./assets/svg/phone.svg", 24);
-
+      .icon("hangouts", "./img/svg/hangouts.svg", 24)
+      .icon("twitter", "./img/svg/twitter.svg", 24)
+      .icon("phone", "./img/svg/phone.svg", 24)
+      .icon("plum","./img/svg/plum-blossoms.svg", 24);
     $mdThemingProvider.theme('default')
-      .primaryPalette('deep-orange')
-      .accentPalette('grey')
+      .primaryPalette('grey')
+      .accentPalette('red')
   });
